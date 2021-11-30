@@ -26,6 +26,20 @@ export default {
         },
         ]
     }
+  },
+  methods: {
+    Changed(e) {
+      this.todos.map(function (todo) {
+        if (todo.title != e.original) {
+          return todo
+        }
+        todo.title = e.new.title
+        return todo
+
+
+      })
+    }
+
   }
 }
 </script>
